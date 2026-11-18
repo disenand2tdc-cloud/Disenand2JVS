@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Yanone+Kaffeesatz:wght@300;400;500;600&display=swap');
+:root{
+  --blue:#2b44ff; --coral:#ff5e4a; --yellow:#ffc91a; --white:#fff; --violet:#1b1526; --bg:#F0EEE7;
+  --f-body:'Yanone Kaffeesatz',sans-serif; --f-title:'Bebas Neue',sans-serif; --f-display:'Anton',sans-serif;
+  --pad:clamp(1.25rem,4vw,3.5rem); --header-h:72px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--violet);font:400 1.3rem/1.5 var(--f-body);min-height:100vh;display:flex;flex-direction:column}
+main{flex:1;padding:calc(var(--header-h) + 3rem) var(--pad) 5rem}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+h1,h2,h3{font-family:var(--f-title);font-weight:400;line-height:1;letter-spacing:.02em}
+h1.display{font-family:var(--f-display);font-size:clamp(3rem,9vw,8rem);text-transform:uppercase;line-height:.95}
+
+/* Header */
+.site-header{position:fixed;inset:0 0 auto 0;height:var(--header-h);z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 var(--pad);
+  background:rgba(240,238,231,.92);backdrop-filter:blur(8px);border-bottom:2px solid var(--violet);
+  transition:opacity .4s ease,transform .4s ease}
+.site-header.is-hidden{opacity:0;transform:translateY(-100%);pointer-events:none}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font:400 1.9rem var(--f-title);letter-spacing:.04em}
+.main-nav ul{list-style:none;padding:0;display:flex;gap:2rem;align-items:center}
+.main-nav a,.sub-toggle{font:400 1.5rem var(--f-title);letter-spacing:.06em;text-decoration:none;color:inherit}
+.main-nav>ul>li>a{position:relative;padding:.3rem 0}
+.main-nav>ul>li>a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--coral);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+.main-nav>ul>li>a:hover::after,.main-nav>ul>li>a[aria-current="page"]::after,.is-section>a::after{transform:scaleX(1)}
+.has-sub{position:relative;display:flex;align-items:center;gap:.2rem}
+.sub-toggle{background:none;border:0;cursor:pointer;padding:.5rem;display:grid;place-items:center}
+.sub-toggle svg{transition:transform .25s}
+.has-sub.open .sub-toggle svg{transform:rotate(180deg)}
+.sub-menu{position:absolute;top:100%;right:0;min-width:21rem;margin-top:.9rem;background:var(--violet);color:var(--bg);padding:.6rem;
+  display:block!important;opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
+.sub-menu::before{content:'';position:absolute;left:0;right:0;bottom:100%;height:1rem}
+.sub-menu a{display:flex;gap:.9rem;align-items:baseline;padding:.6rem .8rem;transition:background .2s,padding .2s}
+.sub-menu a:hover,.sub-menu a[aria-current="page"]{background:var(--blue);padding-left:1.1rem}
+.sub-menu .num{font:400 1.4rem var(--f-display);color:var(--yellow);min-width:2ch}
+.has-sub.open .sub-menu{opacity:1;visibility:visible;transform:none}
+@media (hover:hover) and (min-width:861px){.has-sub:hover .sub-menu,.has-sub:focus-within .sub-menu{opacity:1;visibility:visible;transform:none}}
+.menu-toggle{display:none}
+
+/* Footer */
+.site-footer{background:var(--violet);color:var(--bg);padding:2.5rem var(--pad);display:flex;gap:1.5rem;align-items:flex-start;font-size:1.05rem;line-height:1.4}
+.site-footer img{flex:none}
+.site-footer p+p{margin-top:.25rem;opacity:.8}
+
+/* Placeholder de etapas pendientes */
+.placeholder{border:2px dashed var(--violet);padding:2rem;max-width:60ch;margin-top:2rem;background:rgba(255,201,26,.25)}
+.back-link{display:inline-block;margin-bottom:1.5rem;font:400 1.3rem var(--f-title);letter-spacing:.06em}
+
+/* Logotipos SVG (proporción real; el alto manda y el ancho se ajusta) */
+.brand img{height:40px;width:auto;max-width:none}
+.site-footer img{height:72px;width:auto;max-width:none}

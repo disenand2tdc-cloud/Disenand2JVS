@@ -1,0 +1,22 @@
+/* TRANSICIÓN: tres cortinas (violeta, azul claro, azul) con borde curvo y desfase.
+   Entrada: CSS puro en html::before/::after y body::before. Salida: JS (main.js). */
+:root{--ease:cubic-bezier(.7,0,.2,1)}
+html::before,html::after,body::before{content:'';position:fixed;inset:0;pointer-events:none;transform-origin:top;animation:veil-out .6s var(--ease) forwards;border-radius:0 0 50% 50%/0 0 12vh 12vh}
+html::before{background:var(--violet);z-index:100;animation-delay:.14s}
+html::after{background:#cfd6ff;z-index:101;animation-delay:.07s}
+body::before{background:var(--blue);z-index:102}
+@keyframes veil-out{to{transform:translateY(-112%)}}
+.veil{position:fixed;inset:0;z-index:100;pointer-events:none}
+.veil i{position:absolute;inset:0;transform:translateY(112%);border-radius:50% 50% 0 0/12vh 12vh 0 0;transition:transform .5s var(--ease)}
+.veil i:nth-child(1){background:var(--violet)}
+.veil i:nth-child(2){background:#cfd6ff;transition-delay:.07s}
+.veil i:nth-child(3){background:var(--blue);transition-delay:.14s}
+.veil.on i{transform:none}
+/* Entrada de contenido: un solo gesto, el título principal */
+.rise{animation:rise .7s .45s var(--ease) both}
+@keyframes rise{from{opacity:0;transform:translateY(28px)}}
+@media (prefers-reduced-motion:reduce){
+  html::before,html::after,body::before,.veil{display:none}
+  .rise{animation:none}
+  *{transition-duration:.01ms!important;animation-duration:.01ms!important;scroll-behavior:auto!important}
+}
