@@ -1,0 +1,99 @@
+/* Tipografías de la identidad visual del programa. Solo aplican a esta página (body[data-page=identidad]); no alteran la bitácora. */
+body[data-page=identidad]{--id-main:'Glock Grotesk 2.0','Bebas Neue',sans-serif;--id-sec:'Raleway',sans-serif;--id-sup:'Poppins',sans-serif}
+body[data-page=identidad] .id-txt h2{font-family:var(--id-main);letter-spacing:.02em}
+body[data-page=identidad] .phero h1,body[data-page=identidad] .sec-head h2{font-family:var(--id-main)}
+body[data-page=identidad] .chip h3{font-family:var(--id-sec);font-weight:700;font-size:1.5rem}
+body[data-page=identidad] .id-txt p,body[data-page=identidad] .chip p{font-family:var(--id-sup);font-size:1.05rem;line-height:1.6}
+body[data-page=identidad] .chip code{font-family:var(--id-sup);font-weight:600}
+body[data-page=identidad] .id-lead{font-family:var(--id-sup);margin:0 0 1rem;font-size:1.1rem}
+body[data-page=identidad] .id-group{font-family:var(--id-sec);font-weight:700;font-size:1.3rem;margin:2rem 0 .8rem;letter-spacing:0}
+.fonts{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.font-card{background:#fff;border-radius:var(--r-m);padding:1.4rem;box-shadow:0 8px 20px rgba(27,21,38,.1);border-top:8px solid #0057B8}
+.font-role{font:700 .95rem var(--id-sec);letter-spacing:.12em;text-transform:uppercase;color:#0057B8;margin:0}
+.font-name{font-size:2.4rem;line-height:1.1;margin:.4rem 0}
+.font-sample{font-size:1.3rem;margin:0 0 .8rem}
+.font-use{font:400 1rem/1.6 var(--id-sup);margin:0}
+.f-main{font-family:var(--id-main)}.f-sec{font-family:var(--id-sec);font-weight:700}.f-sup{font-family:var(--id-sup)}
+body[data-page=identidad] .chip h3{font-size:1.2rem}
+
+
+/* Manual editorial de identidad: estilos limitados a esta página. */
+body[data-page=identidad]{scroll-behavior:smooth;scroll-padding-top:7rem}
+body[data-page=identidad] .id-index{
+  position:sticky;top:var(--header-h,76px);z-index:20;background:rgba(255,255,255,.96);
+  border-top:1px solid rgba(27,21,38,.08);border-bottom:1px solid rgba(27,21,38,.12);
+  backdrop-filter:blur(12px);margin:0 0 1rem
+}
+.id-index-inner{max-width:var(--max,1200px);margin:auto;padding:.55rem var(--pad,4vw);display:flex;gap:clamp(.8rem,2.2vw,2rem);overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;white-space:nowrap}
+.id-index a{position:relative;flex:0 0 auto;text-decoration:none;color:var(--ink,var(--violet));font:600 .82rem/1.4 var(--id-sup);padding:.45rem .08rem;opacity:.72}
+.id-index a::after{content:"";position:absolute;left:0;right:100%;bottom:.12rem;height:2px;background:var(--coral);transition:right .2s ease}
+.id-index a:hover,.id-index a.is-active{opacity:1}
+.id-index a.is-active::after{right:0}
+.id-section{scroll-margin-top:9rem}
+.id-section-head{margin:0 0 2rem}
+.id-overline{font:700 .75rem/1.4 var(--id-sup);letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin:0 0 .55rem}
+.id-section-head h2{font:400 clamp(2rem,4vw,3.5rem)/1 var(--id-main);margin:0;color:var(--violet)}
+.id-intro .id-ficha{align-items:center}
+.id-intro .id-txt h2{font-size:clamp(2rem,3.5vw,3.25rem);line-height:1.02;margin:.2rem 0 1rem}
+.id-intro .id-txt p{font-family:var(--id-sup);font-size:1rem;line-height:1.7}
+.id-intro .id-img img{display:block;width:100%;height:auto;object-fit:contain;border-radius:var(--r-m,12px)}
+.id-identifiers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.5rem,4vw,4rem)}
+.id-identifier{min-width:0}
+.id-art{min-height:250px;display:grid;place-items:center;padding:clamp(1.2rem,3vw,2.5rem);border-radius:var(--r-m,12px)}
+.id-art-light{background:#fff;border:1px solid rgba(27,21,38,.1)}
+.id-art img{display:block;width:100%;max-width:440px;max-height:260px;object-fit:contain}
+.id-identifier h3{font:700 1.2rem var(--id-sec);text-transform:uppercase;letter-spacing:.08em;margin:1.2rem 0 .55rem;color:var(--violet)}
+.id-identifier p,.id-reticula-copy p{font:400 1rem/1.75 var(--id-sup);margin:0;text-align:justify}
+.id-grid-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:clamp(2rem,6vw,6rem);align-items:center}
+.id-note{font:400 .85rem/1.6 var(--id-sup);color:#666;margin:1rem 0 0}
+.id-white-logo{min-height:260px;background:#002D62;border-radius:var(--r-m,12px);padding:clamp(2rem,5vw,4rem);display:grid;place-items:center}
+.id-white-logo img{display:block;width:100%;max-width:440px;max-height:230px;object-fit:contain}
+.id-missing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.id-missing{min-height:175px;border:1px dashed rgba(27,21,38,.3);display:flex;flex-direction:column;justify-content:space-between;padding:1.2rem;background:rgba(255,255,255,.35)}
+.id-missing span{font:400 1.8rem var(--id-main);color:var(--coral)}
+.id-missing p{font:400 .9rem/1.55 var(--id-sup);margin:1rem 0 0;color:#555}
+.id-type-list{border-top:1px solid rgba(27,21,38,.18)}
+.id-type{display:grid;grid-template-columns:minmax(180px,.65fr) minmax(0,1.35fr);gap:2rem;padding:1.7rem 0;border-bottom:1px solid rgba(27,21,38,.18);align-items:center}
+.id-type-role{font:700 .72rem var(--id-sup);letter-spacing:.14em;text-transform:uppercase;color:var(--coral);margin:0 0 .5rem}
+.id-type h3{font:700 1.45rem var(--id-sec);margin:0;color:var(--violet)}
+.id-type-specimen{min-width:0}
+.id-type-name{font-size:clamp(1.7rem,3.8vw,3rem);line-height:1.1;margin:0 0 .65rem}
+.id-type-specimen>p:not(.id-type-name){font:400 .85rem/1.6 var(--id-sup);margin:.2rem 0;color:#555;overflow-wrap:anywhere}
+.id-raleway{font-family:'Raleway',sans-serif;font-weight:600}
+.id-poppins{font-family:'Poppins',sans-serif}
+.id-type-block .id-type-name{font-family:var(--id-main)}
+.id-palette-art{margin:0 0 2rem;background:#fff;padding:1rem;border-radius:var(--r-m,12px)}
+.id-palette-art img{display:block;width:100%;height:auto;max-height:360px;object-fit:contain}
+body[data-page=identidad] .id-group{font-family:var(--id-sec);font-size:1.05rem;letter-spacing:.04em;margin:2rem 0 .85rem}
+body[data-page=identidad] .chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:.8rem}
+body[data-page=identidad] .chip{margin:0}
+@media(max-width:760px){
+ .id-identifiers{grid-template-columns:1fr}
+ .id-grid-layout{grid-template-columns:1fr}
+ .id-missing-grid{grid-template-columns:1fr}
+ .id-missing{min-height:115px}
+ .id-type{grid-template-columns:1fr;gap:.8rem}
+ .id-art{min-height:210px}
+ .id-index-inner{padding-left:1rem;padding-right:1rem}
+}
+
+
+/* Elementos de marca: seis recursos originales en una retícula editorial. */
+.id-elements-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.25rem,2.6vw,2.4rem)}
+.id-element{min-width:0;display:flex;flex-direction:column;background:#fff;border:1px solid rgba(27,21,38,.1);border-radius:var(--r-m,12px);overflow:hidden}
+.id-element figure{margin:0;aspect-ratio:1/1;background:#f5f5f7;display:grid;place-items:center;padding:1.1rem}
+.id-element figure img{display:block;width:100%;height:100%;object-fit:contain}
+.id-element>div{padding:1.2rem 1.25rem 1.45rem}
+.id-element-number{font:700 .72rem var(--id-sup);letter-spacing:.12em;color:var(--coral)}
+.id-element h3{font:700 1.05rem/1.25 var(--id-sec);color:var(--violet);margin:.35rem 0 .65rem}
+.id-element p{font:400 .9rem/1.65 var(--id-sup);margin:0;color:var(--ink,var(--violet))}
+.id-downloads-intro{font:400 1rem/1.65 var(--id-sup);max-width:680px;margin:.8rem 0 0}
+.id-download-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.id-download-button{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.25rem 1.4rem;background:#002D62;color:#fff;text-decoration:none;border-radius:var(--r-m,12px);transition:transform .2s ease,background .2s ease}
+.id-download-button:hover{background:#0057B8;transform:translateY(-3px)}
+.id-download-button strong,.id-download-button small{display:block}
+.id-download-button strong{font:700 1rem/1.35 var(--id-sec)}
+.id-download-button small{font:400 .78rem/1.5 var(--id-sup);opacity:.82;margin-top:.3rem}
+.id-download-icon{font-size:1.5rem;line-height:1;flex:0 0 auto}
+@media(max-width:900px){.id-elements-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.id-elements-grid,.id-download-links{grid-template-columns:1fr}.id-element figure{max-height:320px}}
